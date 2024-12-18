@@ -1,0 +1,17 @@
+sources:
+  - name: erp
+    description: Sistema fonte da Adventure Works, de onde extraímos as tabelas RAW.
+    schema: RAW_ADVENTURE_WORKS
+    database: fea24_11
+    tables:
+      - name: CREDITCARD
+      - name: SALESORDERHEADERSALESREASON
+      - name: SALESREASON
+      - name: CUSTOMER
+      - name: PERSON
+      - name: ADDRESS
+      - name: STATEPROVINCE
+      - name: COUNTRYREGION
+      - name: PRODUCT
+      - name: SALESORDERHEADER
+      - name: SALESORDERDETAIL
