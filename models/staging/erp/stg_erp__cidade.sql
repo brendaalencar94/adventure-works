@@ -1,7 +1,7 @@
 with
     fonte_cidade as (
         select
-        cast(ADDRESSID as int) as pk_cidade
+        cast(ADDRESSID as int) as pk_endereco
         --, cast(ADDRESSLINE1 as int) as 
         --, cast(ADDRESSLINE2 as int) as 
         , cast(CITY as string) as desc_cidade
