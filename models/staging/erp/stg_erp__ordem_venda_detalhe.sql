@@ -1,8 +1,9 @@
 with
     fonte_odem_venda_det as (
         select
-        cast(SALESORDERID as int) as fk_ordem_venda
-        , cast(SALESORDERDETAILID as int) as pk_ordem_venda_detalhe
+        SALESORDERID::varchar || '-' || PRODUCTID::varchar as pk_ordem_item
+        , cast(SALESORDERID as int) as fk_ordem_venda
+        --, cast(SALESORDERDETAILID as int) as pk_ordem_venda_detalhe
         --, cast(CARRIERTRACKINGNUMBER as int) as 
         , cast(ORDERQTY as int) as quantidade
         , cast(PRODUCTID as int) as fk_produto
