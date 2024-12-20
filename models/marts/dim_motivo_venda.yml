@@ -1,0 +1,12 @@
+models:
+  - name: dim_motivo_venda
+    description: "Modelo que integra informações sobre motivos de venda."
+    columns:
+      - name: PK_ORDEM_VENDA
+        description: "Identificador único da ordem de venda."
+        data_tests:
+          - not_null
+      - name: DESC_MOT_VENDA
+        description: "Descrição do motivo de venda."
+      - name: TP_MOT_VENDA
+        description: "Tipo do motivo de venda (ex.: promocional, sazonal, etc.)."

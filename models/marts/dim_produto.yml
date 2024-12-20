@@ -1,0 +1,15 @@
+models:
+  - name: dim_produto
+    description: "Modelo que processa informações de produtos a partir da fonte ERP."
+    columns:
+      - name: pk_produto
+        description: "Identificador único do produto."
+        data_tests:
+          - unique
+          - not_null
+      - name: desc_produto
+        description: "Descrição ou nome do produto."
+      - name: fk_subcategoria_prod
+        description: "Identificador da subcategoria do produto."
+      - name: fk_modelo_prod
+        description: "Identificador do modelo do produto."

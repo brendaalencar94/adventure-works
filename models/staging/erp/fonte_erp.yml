@@ -1,0 +1,76 @@
+sources:
+  - name: erp
+    description: Sistema fonte da Adventure Works, de onde extraímos as tabelas RAW.
+    schema: RAW_ADVENTURE_WORKS
+    database: fea24_11
+    tables:
+      - name: CREDITCARD
+        columns:
+          - name: CREDITCARDID
+            data_tests:
+              - unique
+              - not_null              
+      - name: SALESORDERHEADERSALESREASON
+        columns:
+          - name: SALESORDERID
+            data_tests:
+            - not_null
+          - name: SALESREASONID
+            data_tests:
+              - not_null
+      - name: SALESREASON
+        columns:
+          - name: SALESREASONID
+            data_tests:
+              - unique
+              - not_null
+      - name: CUSTOMER
+        columns:
+          - name: CUSTOMERID
+            data_tests:
+              - unique
+              - not_null
+      - name: PERSON
+        columns:
+          - name: BUSINESSENTITYID
+            data_tests:
+              - unique
+              - not_null
+      - name: ADDRESS
+        columns:
+          - name: ADDRESSID
+            data_tests:
+              - unique
+              - not_null
+      - name: STATEPROVINCE
+        columns:
+          - name: STATEPROVINCEID
+            data_tests:
+              - unique
+              - not_null
+      - name: COUNTRYREGION
+        columns:
+          - name: COUNTRYREGIONCODE
+            data_tests:
+              - unique
+              - not_null
+      - name: PRODUCT
+        columns:
+          - name: PRODUCTID
+            data_tests:
+              - unique
+              - not_null
+      - name: SALESORDERHEADER
+        columns:
+          - name: SALESORDERID
+            data_tests:
+              - unique
+              - not_null
+      - name: SALESORDERDETAIL
+        columns:
+          - name: PRODUCTID
+            data_tests:
+              - not_null
+          - name: SALESORDERID
+            data_tests:
+              - not_null

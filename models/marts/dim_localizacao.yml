@@ -1,0 +1,15 @@
+models:
+  - name: dim_localizacao
+    description: "Modelo que integra informações de cidades, estados e países."
+    columns:
+      - name: PK_ENDERECO
+        description: "Identificador único do endereço na tabela de cidades."
+        data_tests:
+          - unique
+          - not_null
+      - name: DESC_CIDADE
+        description: "Descrição ou nome da cidade."
+      - name: DESC_ESTADO
+        description: "Descrição ou nome do estado relacionado à cidade."
+      - name: DESC_PAIS
+        description: "Descrição ou nome do país relacionado ao estado."
