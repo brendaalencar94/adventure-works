@@ -1,0 +1,43 @@
+models:
+  - name: fato_vendas
+    description: "Modelo que integra dados de ordens de venda, seus detalhes e calcula métricas financeiras."
+    columns:
+      - name: PK_ORDEM_ITEM
+        description: "Identificador único do item na ordem de venda."
+        data_tests:
+          - unique
+          - not_null
+      - name: PK_ORDEM_VENDA
+        description: "Identificador único da ordem de venda."
+        data_tests:
+          - not_null
+      - name: FK_CLIENTE
+        description: "Chave estrangeira referenciando o cliente associado à ordem."
+      - name: FK_ENDERECO_FATURA
+        description: "Chave estrangeira referenciando o endereço de faturamento da ordem."
+      - name: FK_ENDERECO_ENVIO
+        description: "Chave estrangeira referenciando o endereço de envio da ordem."
+      - name: FK_CARTAO_CRED
+        description: "Chave estrangeira referenciando o cartão de crédito usado na ordem."
+      - name: FK_ORDEM_VENDA
+        description: "Chave estrangeira associando o detalhe à ordem de venda."
+      - name: FK_PRODUTO
+        description: "Chave estrangeira associando o detalhe ao produto."
+      - name: DATA_ORDEM
+        description: "Data em que a ordem foi criada."
+      - name: DATA_VENCIMENTO
+        description: "Data de vencimento da ordem."
+      - name: DATA_ENVIO
+        description: "Data em que a ordem foi enviada."
+      - name: STATUS
+        description: "Status atual da ordem de venda."
+      - name: QUANTIDADE
+        description: "Quantidade de produtos na ordem."
+      - name: PRECO_UNIDADE
+        description: "Preço unitário do produto na ordem."
+      - name: DESCONTO
+        description: "Desconto aplicado ao item na ordem."
+      - name: faturamento_bruto
+        description: "Valor total bruto calculado pela multiplicação do preço unitário pela quantidade."
+      - name: faturamento_liquido
+        description: "Valor líquido calculado subtraindo o desconto do faturamento bruto."

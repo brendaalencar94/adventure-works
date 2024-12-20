@@ -1,0 +1,13 @@
+models:
+  - name: dim_cliente
+    description: Modelo que integra informações de clientes e pessoas.
+    columns:
+      - name: PK_CLIENTE
+        description: Identificador único do cliente.
+        data_tests:
+          - unique
+          - not_null
+      - name: TP_CLIENTE
+        description: Tipo do cliente (individual, corporativo, etc.).
+      - name: NOME_COMPLETO_CLIENTE
+        description: Nome completo do cliente. Preenchido como 'Não Cadastrado' caso esteja ausente.

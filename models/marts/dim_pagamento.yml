@@ -1,0 +1,11 @@
+models:
+  - name: dim_pagamento
+    description: Dimensão que armazena informações de cartões de crédito.
+    columns:
+      - name: pk_cartao_cred
+        description: Identificador único do cartão de crédito.
+        data_tests:
+          - unique
+          - not_null
+      - name: tp_cartao_cred 
+        description: Tipo do cartão de crédito (débito, crédito, etc).
