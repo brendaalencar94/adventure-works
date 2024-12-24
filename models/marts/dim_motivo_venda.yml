@@ -2,7 +2,7 @@ models:
   - name: dim_motivo_venda
     description: "Modelo que integra informações sobre motivos de venda."
     columns:
-      - name: PK_ORDEM_VENDA
+      - name: FK_ORDEM_VENDA
         description: "Identificador único da ordem de venda."
         data_tests:
           - not_null

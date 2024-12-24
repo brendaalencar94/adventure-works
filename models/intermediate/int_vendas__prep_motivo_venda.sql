@@ -11,7 +11,7 @@ with
 
     , modelar_mot_vendas as (
         select
-        cab_mot_venda.PK_ORDEM_VENDA
+        cab_mot_venda.FK_ORDEM_VENDA
         , mot_venda.DESC_MOT_VENDA
         , mot_venda.TP_MOT_VENDA
         from cab_mot_venda

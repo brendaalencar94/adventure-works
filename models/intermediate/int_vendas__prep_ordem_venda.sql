@@ -13,11 +13,12 @@ with
         select
         ordem_detalhe.PK_ORDEM_ITEM
         , ordem.PK_ORDEM_VENDA
+        , ordem_detalhe.PK_ORDEM_DETALHE
         , ordem.FK_CLIENTE
         , ordem.FK_ENDERECO_FATURA
         , ordem.FK_ENDERECO_ENVIO
         , ordem.FK_CARTAO_CRED
-        , ordem_detalhe.FK_ORDEM_VENDA
+        --, ordem_detalhe.FK_ORDEM_VENDA
         , ordem_detalhe.FK_PRODUTO
         , ordem.DATA_ORDEM
         , ordem.DATA_VENCIMENTO
@@ -34,11 +35,12 @@ with
         select
         PK_ORDEM_ITEM
         , PK_ORDEM_VENDA
+        , PK_ORDEM_DETALHE
         , FK_CLIENTE
         , FK_ENDERECO_FATURA
         , FK_ENDERECO_ENVIO
         , FK_CARTAO_CRED
-        , FK_ORDEM_VENDA
+        --, FK_ORDEM_VENDA
         , FK_PRODUTO
         , DATA_ORDEM
         , DATA_VENCIMENTO
