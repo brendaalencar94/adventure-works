@@ -1,0 +1,9 @@
+models:
+  - name: dim_aux_pedido
+    description: Tabela criada para auxiliar o relacionamento entre Fato de vendas e a Dimensão de motivo, onde ambas possuem muitas PK_ORDEM_VENDA.
+    columns:
+      - name: PK_ORDEM_VENDA
+        description: "Identificador único da ordem de venda."
+        data_tests:
+          - unique
+          - not_null
